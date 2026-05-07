@@ -29,22 +29,6 @@
         ]
       }
     },
-    "github": {
-      "command": "gh",
-      "useStdin": true,
-      "env": {
-        "NO_COLOR": "1",
-        "FORCE_COLOR": "0"
-      },
-      "vars": {
-        "model": "openai/gpt-4o-mini"
-      },
-      "args": [
-        "models",
-        "run",
-        "{model}"
-      ]
-    },
     "claude": {
       "command": "claude",
       "useStdin": true,
