@@ -170,7 +170,7 @@ async function runAIWithPrefix(prompt, options = {}) {
         let spawnArgs = args;
         let spawnOptions = {
             stdio: ['pipe', 'pipe', 'pipe'],
-            shell: true, // Windows互換のため
+            shell: process.platform === 'win32', // Windows のみ shell 経由（Unix では argv 安全のため shell:false）
             env: {
                 ...process.env,
                 ...(provider.env && typeof provider.env === 'object' ? provider.env : {}),

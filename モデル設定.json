@@ -1,9 +1,50 @@
 {
   "version": 1,
   "default": {
-    "provider": "claude"
+    "provider": "copilot"
   },
   "providers": {
+    "copilot": {
+      "command": "copilot",
+      "useStdin": false,
+      "env": {
+        "NO_COLOR": "1",
+        "FORCE_COLOR": "0"
+      },
+      "vars": {
+        "model": ""
+      },
+      "args": [
+        "-p",
+        "{prompt}",
+        "--allow-all-tools",
+        "--no-ask-user",
+        "-s",
+        "--no-color"
+      ],
+      "argsIf": {
+        "model": [
+          "--model",
+          "{model}"
+        ]
+      }
+    },
+    "github": {
+      "command": "gh",
+      "useStdin": true,
+      "env": {
+        "NO_COLOR": "1",
+        "FORCE_COLOR": "0"
+      },
+      "vars": {
+        "model": "openai/gpt-4o-mini"
+      },
+      "args": [
+        "models",
+        "run",
+        "{model}"
+      ]
+    },
     "claude": {
       "command": "claude",
       "useStdin": true,
