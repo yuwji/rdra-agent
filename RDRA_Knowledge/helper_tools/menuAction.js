@@ -271,7 +271,7 @@ function createMenuAction({ rl, promptUser, waitForEnterThenNext }) {
             `- **入力 Application 仕様**: \`${appRel}\``,
             `- **出力先ディレクトリ**: \`3_RDRASdd/ui/${bucEnglishName}/\``,
             `- 今回は **この BUC に属する画面だけ** を生成する。**他 BUC のフォルダーや画面ファイルは作成・変更・削除しない。**`,
-            `- \`${appRel}\` の「利用画面」に列挙された画面数と、\`3_RDRASdd/ui/${bucEnglishName}/\` の本体 \`.md\` 件数（先頭 \`_` 以外、サブフォルダ含む）が一致するまで完了を宣言しない。`,
+            `- \`${appRel}\` の「利用画面」に列挙された画面数と、\`3_RDRASdd/ui/${bucEnglishName}/\` の本体 \`.md\` 件数（先頭 \`_\` 以外、サブフォルダ含む）が一致するまで完了を宣言しない。`,
             '',
             '---',
             '',
